@@ -1,0 +1,44 @@
+1. CLIENT WEBSITE
+
+    HOME
+    - Hero Section with Tagline and Flashy Presentation Video -> Link to scroll
+    - Mission Statement Section -> Link to About Page
+    - Concept Components Section (Rotating Half-Circle Slider) -> Link to Concept Page
+    - Latest Success Stories Section -> Link to Stories Page
+    - Upcoming Events Section -> Link to Facebook Events
+    - Resources Section (Training Plans, Nutrition Plans, Shopping Lists, Progress Tracker) -> 
+    - Contact Section for Customers / Partners -> Link to Get Started Page
+
+    ABOUT
+    - Background Section with Presentation Video
+    - Method Section (Why, How, For Whom) -> Link to Get Started Page
+    - Timeline with past and future achievements
+    - Team Section with all Members -> Link to Partners page
+
+    CONCEPT
+    - Nutrition Section (Recipes, Shopping Lists, Supplements)
+    - Sports Section (Workouts, Training Plans, Progress Trackers)
+    - Fun Section (Special Activities, 1-on-1 Coaching, Perks and Cheats)
+    - Contact Section -> Link to Get Started Page
+
+    STORIES
+    - Weight Loss Stories
+    - Muscle Gain Stories
+    - Health Boost Stories
+
+    RESOURCES
+    - Recipe Downloads
+    - Training Plan Downloads
+    - Progress Tracker Downloads
+    - Shopping List Downloads
+
+    PARTNERS
+    - Why join the Team?
+    - Testimonials of old and new Members
+    - How it works
+    
+    GET STARTED
+
+    POLICE DE PRIVACITE
+
+    TERMES ET CONDITIONS
