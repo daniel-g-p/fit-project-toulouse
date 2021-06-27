@@ -1,0 +1,27 @@
+@use "../1-abstracts/" as *;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 1.5rem 10%;
+    box-shadow: 0 0.25rem 1rem $color-shadow;
+    &__logo {
+        height: 2.5rem;
+        width: 2.5rem;
+        transition: transform 0.25s ease;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+        &:hover {
+            transform: translateY(-0.25rem);
+        }
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+    &__link {
+        margin-right: 2rem;
+    }
+}

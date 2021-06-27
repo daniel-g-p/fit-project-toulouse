@@ -1,34 +1,125 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    font: 400 150%/1.5 "Poppins", sans-serif;
+  font: 400 125%/1.5 "Poppins", sans-serif;
+  color: #404040;
 }
 
 body {
-    box-sizing: border-box;
-    background-color: red;
-}
-
-h1 {
-    color: green;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: "Poppins";
-    src: url("./fonts/poppins_bold.woff2") format("woff2"), url("./fonts/poppins_bold.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Poppins";
+  src: url("./fonts/poppins_bold.woff2") format("woff2"), url("./fonts/poppins_bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/poppins_regular.woff2") format("woff2"), url("./fonts/poppins_regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.nav-link:link, .nav-link:visited {
+  position: relative;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1;
+  color: currentColor;
+}
+.nav-link:link::after, .nav-link:visited::after {
+  position: absolute;
+  bottom: -0.125em;
+  left: 50%;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.125em;
+  background-image: linear-gradient(to right, #4AC752, #FCC201);
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+.nav-link:hover::after, .nav-link:focus::after {
+  left: 0%;
+  width: 100%;
+  opacity: 1;
 }
 
-@font-face {
-    font-family: "Poppins";
-    src: url("./fonts/poppins_regular.woff2") format("woff2"), url("./fonts/poppins_regular.woff") format("woff");
-    font-weight: bold;
-    font-style: normal;
+.list {
+  list-style: none;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 1.5rem 10%;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+.header__logo {
+  height: 2.5rem;
+  width: 2.5rem;
+  transition: transform 0.25s ease;
+}
+.header__logo img {
+  height: 100%;
+  width: 100%;
+}
+.header__logo:hover {
+  transform: translateY(-0.25rem);
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+.header__link {
+  margin-right: 2rem;
+}
+
+.button--color:link, .button--color:visited {
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  color: currentColor;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+.button--color:link::before, .button--color:link::after, .button--color:visited::before, .button--color:visited::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.button--color:link::before, .button--color:visited::before {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  transition: opacity 0.25s ease;
+}
+.button--color:link::after, .button--color:visited::after {
+  z-index: -2;
+  width: calc(100% + 0.25em);
+  height: calc(100% + 0.25em);
+  background-image: linear-gradient(to right, #4AC752, #FCC201);
+}
+.button--color:hover, .button--color:focus {
+  color: #FFFFFF;
+  transform: translateY(-0.25em);
+}
+.button--color:hover::before, .button--color:focus::before {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
