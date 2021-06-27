@@ -1,9 +1,12 @@
 @use "../1-abstracts/" as *;
 .header {
+    position: relative;
+    z-index: 2;
+    grid-column: page-start / page-end;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    padding: 1.5rem 10%;
+    padding: 1.25rem 10%;
     box-shadow: 0 0.25rem 1rem $color-shadow;
     &__logo {
         height: 2.5rem;

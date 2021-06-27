@@ -1,0 +1,66 @@
+@use "../1-abstracts/" as *;
+.hero-section {
+    position: relative;
+    z-index: 1;
+    grid-column: content-start / column-end 10;
+    grid-row: hero-start / hero-end;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 6rem 0;
+    &__title {
+        display: inline-block;
+        backface-visibility: hidden;
+        background-image: linear-gradient(to right, $color-green, $color-gold-1);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        margin-bottom: 1rem;
+    }
+    &__text {
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+    &__button {}
+}
+
+.video-section {
+    position: relative;
+    grid-column: column-start 7 / page-end;
+    grid-row: hero-start / hero-end;
+    clip-path: polygon(10vw 0, 50vw 0, 100% 100%, 0 100%);
+    overflow: hidden;
+    &__overlay {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(10vw 0, 50vw 0, 100% 100%, 0 100%);
+        background-color: rgba($color-white, 0.5);
+    }
+    &__video {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+    }
+    &__play-button {
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        transform: translate(calc(-50% + 2.5vw), -50%);
+        width: 4rem;
+        height: 4rem;
+        cursor: pointer;
+        transition: transform 0.25s ease;
+        &:hover {
+            transform: translate(calc(-50% + 2.5vw), -50%) scale(1.1);
+        }
+    }
+}

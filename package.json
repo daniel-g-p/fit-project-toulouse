@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "watch": "sass --watch src:public/styles",
+        "start": "live-server",
         "compile": "sass src:public/styles/main.comp.css",
         "prefix": "postcss public/styles/main.comp.css -u autoprefixer -o public/styles/main.prefix.css",
         "compress": "sass public/styles/main.prefix.css:public/styles --style compressed",
@@ -15,6 +16,7 @@
     "license": "ISC",
     "devDependencies": {
         "autoprefixer": "^10.2.6",
+        "live-server": "^1.1.0",
         "npm-run-all": "^4.1.5",
         "postcss-cli": "^8.3.1",
         "sass": "^1.35.1"

@@ -3,16 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fit Project Toulouse</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/main.css">
+    <title>Fit Project Toulouse</title>
 </head>
 
-<body>
+<body class="grid grid--home">
     <header class="header">
         <a href="index.html" class="header__logo">
-            <img src="./assets/logo.svg" alt="Fit Project Toulouse Logo">
+            <img src="assets/logo.svg" alt="Fit Project Toulouse Logo">
         </a>
         <nav class="header__nav">
             <a href="index.html" class="header__link nav-link">Accueil</a>
@@ -23,6 +23,18 @@
                 parti</a>
         </nav>
     </header>
+    <section class="hero-section">
+        <h1 class="heading-1 hero-section__title">Le reste de ta vie commence ici!</h1>
+        <p class="hero-section__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos laborum quos repellat modi, temporibus fugit!</p>
+        <a href="get_started.html" class="hero-section__button button button--color">Qui sommes-nous?</a>
+    </section>
+    <section class="video-section">
+        <div class="video-section__overlay"></div>
+        <img src="assets/freedom-background.jpg" alt="Le reste de ta vie commence ici!" class="video-section__video">
+        <svg class="video-section__play-button">
+            <use href="assets/icons.svg#icon-play"></use>
+        </svg>
+    </section>
 </body>
 
 </html>
