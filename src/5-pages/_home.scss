@@ -4,7 +4,6 @@
     z-index: 1;
     grid-column: content-start / column-end 10;
     grid-row: hero-start / hero-end;
-    min-height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,5 +61,24 @@
         &:hover {
             transform: translate(calc(-50% + 2.5vw), -50%) scale(1.1);
         }
+    }
+}
+
+.intro-section {
+    grid-column: page-start / page-end;
+    grid-row: intro-start / intro-end;
+    background-color: $color-light-grey-1;
+    padding: 6rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__content {
+        padding-left: 3rem;
+    }
+    &__title {
+        margin-bottom: 1rem;
+    }
+    &__text {
+        margin-bottom: 1rem;
     }
 }

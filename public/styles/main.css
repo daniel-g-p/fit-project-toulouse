@@ -54,7 +54,7 @@ body {
 }
 
 .heading-1 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   line-height: 1.25;
 }
 
@@ -93,7 +93,7 @@ body {
   grid-template-columns: [page-start] 10% [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 10% [page-end];
 }
 .grid--home {
-  grid-template-rows: [header-start] min-content [header-end hero-start] minmax(75vh, max-content) [hero-end];
+  grid-template-rows: [header-start] min-content [header-end hero-start] minmax(75vh, min-content) [hero-end intro-start] min-content [intro-end];
 }
 
 .button--color:link, .button--color:visited {
@@ -134,12 +134,27 @@ body {
   opacity: 0;
 }
 
+.logo-mask {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 30vw;
+  height: 30vw;
+  background-image: url("../assets/fitness-background.jpg");
+  background-size: cover;
+  background-position: center;
+  -webkit-mask-image: url("../assets/logo-mask.svg");
+  mask-image: url("../assets/logo-mask.svg");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
 .hero-section {
   position: relative;
   z-index: 1;
   grid-column: content-start/column-end 10;
   grid-row: hero-start/hero-end;
-  min-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -196,6 +211,25 @@ body {
 }
 .video-section__play-button:hover {
   transform: translate(calc(-50% + 2.5vw), -50%) scale(1.1);
+}
+
+.intro-section {
+  grid-column: page-start/page-end;
+  grid-row: intro-start/intro-end;
+  background-color: #F7F7F7;
+  padding: 6rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.intro-section__content {
+  padding-left: 3rem;
+}
+.intro-section__title {
+  margin-bottom: 1rem;
+}
+.intro-section__text {
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
