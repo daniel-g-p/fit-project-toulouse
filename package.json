@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "watch": "sass --watch source:public/styles",
-        "compile": "sass source:public/styles/main.comp.css",
+        "watch": "sass --watch src:public/styles",
+        "compile": "sass src:public/styles/main.comp.css",
         "prefix": "postcss public/styles/main.comp.css -u autoprefixer -o public/styles/main.prefix.css",
         "compress": "sass public/styles/main.prefix.css:public/styles --style compressed",
         "build": "npm-run-all compile prefix compress"
