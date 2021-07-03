@@ -1,0 +1,74 @@
+@use "../1-abstracts/" as *;
+.concept {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0 3rem;
+    &__content {
+        text-align: left;
+    }
+    &__heading {
+        color: $color-green;
+        margin-bottom: 0.5em;
+    }
+    &__element {
+        position: relative;
+        width: 25vw;
+        height: 25vw;
+        min-width: 25vw;
+        min-height: 25vw;
+        border-radius: 50%;
+        margin: 0 2rem;
+        background-image: url("../assets/nutrition-background.jpg");
+        background-size: cover;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 2rem $color-shadow;
+    }
+    &__name {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        z-index: 2;
+        color: $color-white;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        line-height: 1;
+        opacity: 0;
+        transition: all 0.25s ease;
+        &--active {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+    &__chevron {
+        position: relative;
+        z-index: 2;
+        height: 1.5rem;
+        width: 0.75rem;
+        cursor: pointer;
+        transition: transform 0.25s ease;
+        &:hover {
+            transform: scale(1.25);
+        }
+        &--right {
+            transform: rotate(180deg);
+            &:hover {
+                transform: scale(1.25) rotate(180deg);
+            }
+        }
+    }
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgba($color-green, 0.8);
+    }
+}
