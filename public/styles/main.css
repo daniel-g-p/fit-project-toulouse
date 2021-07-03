@@ -72,6 +72,7 @@ body {
   height: 2.5rem;
   width: 2.5rem;
   transition: transform 0.25s ease;
+  perspective: 24rem;
 }
 .header__logo img {
   height: 100%;
@@ -93,7 +94,7 @@ body {
   grid-template-columns: [page-start] 10% [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 10% [page-end];
 }
 .grid--home {
-  grid-template-rows: [header-start] min-content [header-end hero-start] minmax(75vh, min-content) [hero-end intro-start] min-content [intro-end];
+  grid-template-rows: [header-start] min-content [header-end hero-start] minmax(75vh, min-content) [hero-end intro-start] min-content [intro-end concept-start] min-content [concept-end];
 }
 
 .button--color:link, .button--color:visited {
@@ -150,6 +151,70 @@ body {
   mask-repeat: no-repeat;
 }
 
+.concept {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0 3rem;
+}
+.concept__content {
+  text-align: left;
+}
+.concept__heading {
+  color: #4AC752;
+  margin-bottom: 0.5em;
+}
+.concept__element {
+  position: relative;
+  width: 25vw;
+  height: 25vw;
+  min-width: 25vw;
+  min-height: 25vw;
+  border-radius: 50%;
+  margin: 0 2rem;
+  background-image: url("../assets/nutrition-background.jpg");
+  background-size: cover;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.concept__name {
+  position: relative;
+  z-index: 2;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+.concept__chevron {
+  position: relative;
+  z-index: 2;
+  height: 1.5rem;
+  width: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+.concept__chevron:hover {
+  transform: scale(1.25);
+}
+.concept__chevron--right {
+  transform: rotate(180deg);
+}
+.concept__chevron--right:hover {
+  transform: scale(1.25) rotate(180deg);
+}
+.concept__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(74, 199, 82, 0.8);
+}
+
 .hero-section {
   position: relative;
   z-index: 1;
@@ -159,14 +224,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 6rem 0;
+  padding: 4.5rem 0;
 }
 .hero-section__title {
   display: inline-block;
   backface-visibility: hidden;
   background-image: linear-gradient(to right, #4AC752, #FCC201);
   background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
   margin-bottom: 1rem;
 }
@@ -174,6 +238,7 @@ body {
   width: 50%;
   margin-bottom: 2rem;
 }
+
 .video-section {
   position: relative;
   grid-column: column-start 7/page-end;
@@ -217,7 +282,7 @@ body {
   grid-column: page-start/page-end;
   grid-row: intro-start/intro-end;
   background-color: #F7F7F7;
-  padding: 6rem 10%;
+  padding: 4.5rem 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -229,6 +294,16 @@ body {
   margin-bottom: 1rem;
 }
 .intro-section__text {
+  margin-bottom: 1rem;
+}
+
+.concept-section {
+  grid-row: concept-start/concept-end;
+  grid-column: content-start/content-end;
+  text-align: center;
+  padding: 4.5rem 0;
+}
+.concept-section__title {
   margin-bottom: 1rem;
 }
 

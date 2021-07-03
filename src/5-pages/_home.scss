@@ -8,13 +8,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 6rem 0;
+    padding: 4.5rem 0;
     &__title {
         display: inline-block;
         backface-visibility: hidden;
         background-image: linear-gradient(to right, $color-green, $color-gold-1);
         background-clip: text;
-        -webkit-background-clip: text;
         color: transparent;
         margin-bottom: 1rem;
     }
@@ -22,7 +21,6 @@
         width: 50%;
         margin-bottom: 2rem;
     }
-    &__button {}
 }
 
 .video-section {
@@ -68,7 +66,7 @@
     grid-column: page-start / page-end;
     grid-row: intro-start / intro-end;
     background-color: $color-light-grey-1;
-    padding: 6rem 10%;
+    padding: 4.5rem 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,6 +77,16 @@
         margin-bottom: 1rem;
     }
     &__text {
+        margin-bottom: 1rem;
+    }
+}
+
+.concept-section {
+    grid-row: concept-start / concept-end;
+    grid-column: content-start / content-end;
+    text-align: center;
+    padding: 4.5rem 0;
+    &__title {
         margin-bottom: 1rem;
     }
 }
