@@ -7,6 +7,11 @@
     box-sizing: inherit;
 }
 
+::selection {
+    color: $color-white;
+    background-color: $color-dark-grey;
+}
+
 html {
     font: 400 125%/1.5 "Poppins", sans-serif;
     color: $color-dark-grey;

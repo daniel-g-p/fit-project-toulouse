@@ -6,6 +6,11 @@
   box-sizing: inherit;
 }
 
+::selection {
+  color: #FFFFFF;
+  background-color: #404040;
+}
+
 html {
   font: 400 125%/1.5 "Poppins", sans-serif;
   color: #404040;
@@ -58,6 +63,14 @@ body {
   line-height: 1.25;
 }
 
+.heading-2 {
+  font-size: 2rem;
+}
+
+.unclickable {
+  pointer-events: none;
+}
+
 .header {
   position: relative;
   z-index: 2;
@@ -94,11 +107,12 @@ body {
   grid-template-columns: [page-start] 10% [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 10% [page-end];
 }
 .grid--home {
-  grid-template-rows: [header-start] min-content [header-end hero-start] minmax(75vh, min-content) [hero-end intro-start] min-content [intro-end concept-start] min-content [concept-end];
+  grid-template-rows: [header-start] min-content [header-end hero-start] minmax(75vh, min-content) [hero-end intro-start] min-content [intro-end concept-start] min-content [concept-end stories-start] min-content [stories-end];
 }
 
 .button {
   display: inline-block;
+  color: currentColor;
 }
 .button:link, .button:visited {
   position: relative;
@@ -106,7 +120,6 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.5em 1em;
-  color: currentColor;
   transition: all 0.25s ease;
 }
 .button--color::before, .button--color::after {
@@ -145,6 +158,16 @@ body {
   transform: translateY(-0.25em);
   color: #FFFFFF;
   background-color: #404040;
+}
+.button--white {
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 0.125em solid #FFFFFF;
+}
+.button--white:hover {
+  transform: translateY(-0.25em);
+  color: #404040;
+  background-color: #FFFFFF;
 }
 
 .logo-mask {
@@ -297,6 +320,42 @@ body {
   background-color: rgba(252, 194, 1, 0.75);
 }
 
+.stories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.story {
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 0 2rem 2rem;
+  color: #FFFFFF;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease;
+}
+.story__image {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: -3rem auto 1rem;
+}
+.story__image img {
+  width: 100%;
+  height: 100%;
+}
+.story__line {
+  padding: 0.5em;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.story__line:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.story:hover {
+  transform: translateY(-0.5rem);
+}
+
 .hero-section {
   position: relative;
   z-index: 1;
@@ -312,6 +371,7 @@ body {
   display: inline-block;
   backface-visibility: hidden;
   background-image: linear-gradient(to right, #4AC752, #FCC201);
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   margin-bottom: 1rem;
@@ -387,6 +447,18 @@ body {
 }
 .concept-section__title {
   margin-bottom: 1rem;
+}
+
+.stories-section {
+  grid-row: stories-start/stories-end;
+  grid-column: page-start/page-end;
+  text-align: center;
+  padding: 4.5rem 10%;
+  background-image: linear-gradient(to right bottom, #4AC752, #FCC201);
+}
+.stories-section__title {
+  margin-bottom: 4.5rem;
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=main.css.map */

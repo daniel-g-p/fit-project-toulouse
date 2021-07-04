@@ -1,6 +1,7 @@
 @use "../1-abstracts/" as *;
 .button {
     display: inline-block;
+    color: currentColor;
     &:link,
     &:visited {
         position: relative;
@@ -8,7 +9,6 @@
         text-decoration: none;
         text-transform: uppercase;
         padding: 0.5em 1em;
-        color: currentColor;
         transition: all 0.25s ease;
     }
     &--color {
@@ -50,6 +50,16 @@
             transform: translateY(-0.25em);
             color: $color-white;
             background-color: $color-dark-grey;
+        }
+    }
+    &--white {
+        color: $color-white;
+        background-color: transparent;
+        border: 0.125em solid $color-white;
+        &:hover {
+            transform: translateY(-0.25em);
+            color: $color-dark-grey;
+            background-color: $color-white;
         }
     }
 }

@@ -2,6 +2,6 @@
     display: grid;
     grid-template-columns: [page-start] 10% [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 10% [page-end];
     &--home {
-        grid-template-rows: [header-start] min-content [header-end hero-start] minmax(75vh, min-content) [hero-end intro-start] min-content [intro-end concept-start] min-content [concept-end]
+        grid-template-rows: [header-start] min-content [header-end hero-start] minmax(75vh, min-content) [hero-end intro-start] min-content [intro-end concept-start] min-content [concept-end stories-start] min-content [stories-end]
     }
 }

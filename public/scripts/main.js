@@ -4,6 +4,7 @@ const conceptOverlay = document.querySelector(".concept__overlay");
 const conceptElements = [];
 
 conceptArrows.forEach(a => a.addEventListener("click", () => {
+    a.classList.toggle("unclickable");
     const activeName = findElement("concept__name", "active");
     const activeNumber = Number(activeName.classList.value.replace(/[^\d.]/g, ''));
     const activeImage = findElement("concept__image", activeNumber);
@@ -30,6 +31,7 @@ conceptArrows.forEach(a => a.addEventListener("click", () => {
         nextHow.classList.toggle("concept__how--enter");
         activeWhy.classList.replace("concept__why--exit", "concept__why--enter");
         activeHow.classList.replace("concept__how--exit", "concept__how--enter");
+        a.classList.toggle("unclickable");
     }, 500);
 }));
 
