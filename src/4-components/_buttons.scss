@@ -1,5 +1,6 @@
 @use "../1-abstracts/" as *;
 .button {
+    display: inline-block;
     &--color {
         &:link,
         &:visited {

@@ -1,15 +1,55 @@
 @use "../1-abstracts/" as *;
+$color-1: $color-green;
+$color-2: $color-blue;
+$color-3: $color-gold-1;
 .concept {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    display: block;
+    justify-content: center;
     align-items: center;
-    margin: 2rem 0 3rem;
+    width: 100%;
+    margin: 2rem auto 3rem;
     &__content {
         text-align: left;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22.5vw;
+        transition: all 0.5s ease;
+    }
+    &__why {
+        left: 0;
+        &--enter {
+            opacity: 0;
+            transform: translateY(calc(-50% + 2rem));
+        }
+        &--exit {
+            opacity: 0;
+            transform: translateY(calc(-50% - 2rem));
+        }
+    }
+    &__how {
+        right: 0;
+        &--enter {
+            opacity: 0;
+            transform: translateY(calc(-50% - 2rem));
+        }
+        &--exit {
+            opacity: 0;
+            transform: translateY(calc(-50% + 2rem));
+        }
     }
     &__heading {
-        color: $color-green;
         margin-bottom: 0.5em;
+        &--1 {
+            color: $color-1;
+        }
+        &--2 {
+            color: $color-2;
+        }
+        &--3 {
+            color: $color-3;
+        }
     }
     &__element {
         position: relative;
@@ -18,14 +58,13 @@
         min-width: 25vw;
         min-height: 25vw;
         border-radius: 50%;
-        margin: 0 2rem;
-        background-image: url("../assets/nutrition-background.jpg");
-        background-size: cover;
+        margin: 0 auto;
         padding: 1rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
         box-shadow: 0 0 2rem $color-shadow;
+        overflow: hidden;
     }
     &__name {
         position: absolute;
@@ -61,6 +100,21 @@
             }
         }
     }
+    &__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        min-width: 100%;
+        min-height: 100%;
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        &--active {
+            opacity: 1;
+        }
+    }
     &__overlay {
         position: absolute;
         top: 0;
@@ -69,6 +123,15 @@
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        background-color: rgba($color-green, 0.8);
+        transition: background-color 0.5s ease;
+        &--1 {
+            background-color: rgba($color-1, 0.75);
+        }
+        &--2 {
+            background-color: rgba($color-2, 0.75);
+        }
+        &--3 {
+            background-color: rgba($color-3, 0.75);
+        }
     }
 }
