@@ -6,9 +6,9 @@
     "scripts": {
         "watch": "sass --watch src:public/styles",
         "start": "live-server",
-        "compile": "sass src:public/styles/main.comp.css",
-        "prefix": "postcss public/styles/main.comp.css -u autoprefixer -o public/styles/main.prefix.css",
-        "compress": "sass public/styles/main.prefix.css:public/styles --style compressed",
+        "compile": "sass src:public/styles",
+        "prefix": "postcss public/styles/main.css --use autoprefixer -o public/styles/main.css",
+        "compress": "sass public/styles/main.css public/styles/main.css --style compressed",
         "build": "npm-run-all compile prefix compress"
     },
     "keywords": [],
