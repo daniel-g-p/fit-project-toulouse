@@ -100,16 +100,16 @@ body {
 .button {
   display: inline-block;
 }
-.button--color:link, .button--color:visited {
+.button:link, .button:visited {
   position: relative;
   z-index: 1;
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.5em 1em;
   color: currentColor;
-  transition: color 0.25s ease, transform 0.25s ease;
+  transition: all 0.25s ease;
 }
-.button--color:link::before, .button--color:link::after, .button--color:visited::before, .button--color:visited::after {
+.button--color::before, .button--color::after {
   content: "";
   position: absolute;
   display: block;
@@ -117,14 +117,14 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.button--color:link::before, .button--color:visited::before {
+.button--color::before {
   z-index: -1;
   width: 100%;
   height: 100%;
   background-color: #FFFFFF;
   transition: opacity 0.25s ease;
 }
-.button--color:link::after, .button--color:visited::after {
+.button--color::after {
   z-index: -2;
   width: calc(100% + 0.25em);
   height: calc(100% + 0.25em);
@@ -136,6 +136,15 @@ body {
 }
 .button--color:hover::before, .button--color:focus::before {
   opacity: 0;
+}
+.button--grey {
+  background-color: transparent;
+  border: 0.125em solid #404040;
+}
+.button--grey:hover {
+  transform: translateY(-0.25em);
+  color: #FFFFFF;
+  background-color: #404040;
 }
 
 .logo-mask {
