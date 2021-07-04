@@ -19,20 +19,21 @@ conceptArrows.forEach(a => a.addEventListener("click", () => {
     const nextImage = findElement("concept__image", nextNumber);
     const nextWhy = findElement("concept__why", nextNumber);
     const nextHow = findElement("concept__how", nextNumber);
-    nextName.classList.toggle("concept__name--active");
     activeName.classList.toggle("concept__name--active");
-    nextImage.classList.toggle("concept__image--active");
     activeWhy.classList.toggle("concept__why--exit");
     activeHow.classList.toggle("concept__how--exit");
-    activeImage.classList.toggle("concept__image--active");
+    activeImage.classList.replace("concept__image--active", "concept__image--exit");
+    nextName.classList.toggle("concept__name--active");
+    nextImage.classList.toggle("concept__image--active");
     conceptOverlay.classList.replace(`concept__overlay--${activeNumber}`, `concept__overlay--${nextNumber}`);
     setTimeout(() => {
         nextWhy.classList.toggle("concept__why--enter");
         nextHow.classList.toggle("concept__how--enter");
         activeWhy.classList.replace("concept__why--exit", "concept__why--enter");
         activeHow.classList.replace("concept__how--exit", "concept__how--enter");
+        activeImage.classList.toggle("concept__image--exit");
         a.classList.toggle("unclickable");
-    }, 500);
+    }, 250);
 }));
 
 const adaptIndexToArray = (num, arr) => {

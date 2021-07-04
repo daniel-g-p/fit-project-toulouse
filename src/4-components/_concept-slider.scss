@@ -15,28 +15,28 @@ $color-3: $color-gold-1;
         top: 50%;
         transform: translateY(-50%);
         width: 22.5vw;
-        transition: all 0.5s ease;
+        transition: all 0.25s ease;
     }
     &__why {
         left: 0;
         &--enter {
             opacity: 0;
-            transform: translateY(calc(-50% + 2rem));
+            transform: translateY(calc(-50% + 1rem));
         }
         &--exit {
             opacity: 0;
-            transform: translateY(calc(-50% - 2rem));
+            transform: translateY(calc(-50% - 1rem));
         }
     }
     &__how {
         right: 0;
         &--enter {
             opacity: 0;
-            transform: translateY(calc(-50% - 2rem));
+            transform: translateY(calc(-50% - 1rem));
         }
         &--exit {
             opacity: 0;
-            transform: translateY(calc(-50% + 2rem));
+            transform: translateY(calc(-50% + 1rem));
         }
     }
     &__heading {
@@ -104,15 +104,20 @@ $color-3: $color-gold-1;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) rotate(-10deg) scale(1);
         z-index: 1;
         min-width: 100%;
         min-height: 100%;
         border-radius: 50%;
         opacity: 0;
-        transition: opacity 0.5s ease;
+        transition: all 0.5s ease;
         &--active {
             opacity: 1;
+            transform: translate(-50%, -50%) rotate(0deg) scale(1.1);
+        }
+        &--exit {
+            opacity: 0;
+            transform: translate(-50%, -50%) rotate(10deg) scale(1);
         }
     }
     &__overlay {

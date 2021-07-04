@@ -103,3 +103,13 @@
         color: $color-white;
     }
 }
+
+.contact-section {
+    grid-column: content-start / content-end;
+    grid-row: contact-start / contact-end;
+    text-align: center;
+    padding: 4.5rem 0;
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+}

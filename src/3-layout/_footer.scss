@@ -1,0 +1,37 @@
+@use "../1-abstracts/" as *;
+.footer {
+    grid-column: page-start / page-end;
+    grid-row: footer-start / footer-end;
+    padding: 1.25rem 10%;
+    background-color: $color-dark-grey;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: repeat(2, min-content);
+    align-items: center;
+    gap: 0.5rem 2rem;
+    color: $color-white;
+    &__logo {
+        grid-row: 1 / span 2;
+        grid-column: 2 / -1;
+        height: 2.5rem;
+        width: 2.5rem;
+        transition: transform 0.25s ease;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+        &:hover {
+            transform: translateY(-0.25rem);
+        }
+    }
+    &__link {
+        display: inline-block;
+        margin-right: 1rem;
+        &:hover {
+            color: $color-white;
+        }
+    }
+    &__disclaimer {
+        color: rgba($color-white, 0.5);
+    }
+}
