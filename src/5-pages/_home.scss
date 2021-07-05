@@ -2,13 +2,17 @@
 .hero-section {
     position: relative;
     z-index: 1;
-    grid-column: content-start / column-end 10;
+    grid-column: content-start / column-end 9;
     grid-row: hero-start / hero-end;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding: 4.5rem 0;
+    @include respond($screen-s) {
+        padding: 3rem 0;
+        grid-column: content-start / content-end;
+    }
     &__title {
         display: inline-block;
         backface-visibility: hidden;
@@ -21,6 +25,9 @@
     &__text {
         width: 50%;
         margin-bottom: 2rem;
+        @include respond($screen-s) {
+            width: 100%;
+        }
     }
 }
 
@@ -30,6 +37,12 @@
     grid-row: hero-start / hero-end;
     clip-path: polygon(10vw 0, 50vw 0, 100% 100%, 0 100%);
     overflow: hidden;
+    height: 33vh;
+    @include respond($screen-s) {
+        clip-path: none;
+        grid-column: page-start / page-end;
+        grid-row: video-start / video-end;
+    }
     &__overlay {
         position: relative;
         z-index: 1;
@@ -38,6 +51,9 @@
         height: 100%;
         clip-path: polygon(10vw 0, 50vw 0, 100% 100%, 0 100%);
         background-color: rgba($color-white, 0.5);
+        @include respond($screen-s) {
+            clip-path: none;
+        }
     }
     &__video {
         position: absolute;
@@ -71,8 +87,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include respond($screen-l) {
+        padding: 4.5rem 3rem;
+    }
+    @include respond($screen-m) {
+        flex-direction: column;
+    }
+    @include respond($screen-s) {
+        padding: 4.5rem 1.5rem;
+    }
     &__content {
         padding-left: 3rem;
+        @include respond($screen-m) {
+            padding-left: 0;
+            padding-top: 2rem;
+        }
     }
     &__title {
         margin-bottom: 1rem;
@@ -98,6 +127,12 @@
     text-align: center;
     padding: 4.5rem 10%;
     background-image: linear-gradient(to right bottom, $color-green, $color-gold-1);
+    @include respond($screen-l) {
+        padding: 4.5rem 3rem;
+    }
+    @include respond($screen-s) {
+        padding: 4.5rem 1.5rem;
+    }
     &__title {
         margin-bottom: 4.5rem;
         color: $color-white;

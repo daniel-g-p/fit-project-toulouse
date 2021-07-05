@@ -1,3 +1,4 @@
+@use "../1-abstracts/" as *;
 .logo-mask {
     display: inline-block;
     flex-shrink: 0;
@@ -12,4 +13,10 @@
     mask-position: center;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
+    @include respond($screen-m) {
+        width: 60vw;
+        height: 60vw;
+        max-width: 20rem;
+        max-height: 20rem;
+    }
 }

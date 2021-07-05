@@ -48,6 +48,12 @@
 .heading-1 {
     font-size: 4rem;
     line-height: 1.25;
+    @include respond($screen-s) {
+        font-size: 3rem;
+    }
+    @include respond($screen-xs) {
+        font-size: 2.5rem;
+    }
 }
 
 .heading-2 {

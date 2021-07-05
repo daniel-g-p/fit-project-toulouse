@@ -7,8 +7,9 @@
 @use "./4-components/buttons";
 @use "./4-components/logo-mask";
 @use "./4-components/concept-slider";
-@use "./4-components/__story-card";
-@use "./4-components/__get-started-block";
+@use "./4-components/story-card";
+@use "./4-components/get-started-block";
+@use "./4-components/video-popup";
 @use "./5-pages/home";
 @use "./5-pages/about";
 @use "./5-pages/concept";

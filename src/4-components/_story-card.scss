@@ -1,8 +1,8 @@
 @use "../1-abstracts/" as *;
 .stories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 5rem 2rem;
     margin-bottom: 2.5rem;
 }
 

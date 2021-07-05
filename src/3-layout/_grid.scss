@@ -1,7 +1,36 @@
+@use "../1-abstracts/" as *;
 .grid {
     display: grid;
     grid-template-columns: [page-start] 10% [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 10% [page-end];
+    @include respond($screen-l) {
+        grid-template-columns: [page-start] 3rem [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 3rem [page-end];
+    }
+    @include respond($screen-s) {
+        grid-template-columns: [page-start] 1.5rem [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 1.5rem [page-end];
+    }
     &--home {
-        grid-template-rows: [header-start] min-content [header-end hero-start] minmax(75vh, min-content) [hero-end intro-start] min-content [intro-end concept-start] min-content [concept-end stories-start] min-content [stories-end contact-start] min-content [contact-end footer-start] min-content [footer-end]
+        grid-template-rows: [header-start] min-content [header-end hero-start] minmax(75vh, min-content) [hero-end intro-start] min-content [intro-end concept-start] min-content [concept-end stories-start] min-content [stories-end contact-start] min-content [contact-end footer-start] min-content [footer-end];
+        @include respond($screen-s) {
+            grid-template-rows: [header-start] min-content [header-end hero-start] minmax(50vh, min-content) [hero-end video-start] min-content [video-end intro-start] min-content [intro-end concept-start] min-content [concept-end stories-start] min-content [stories-end contact-start] min-content [contact-end footer-start] min-content [footer-end];
+        }
+    }
+}
+
+.body-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    cursor: pointer;
+    &--active {
+        opacity: 1;
+        pointer-events: all;
     }
 }

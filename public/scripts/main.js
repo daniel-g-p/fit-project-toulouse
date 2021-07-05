@@ -1,3 +1,15 @@
+const navToggle = document.querySelector(".nav-toggle__input");
+const headerNav = document.querySelector(".header__nav");
+
+navToggle.addEventListener("change", () => {
+    if (navToggle.checked) {
+        headerNav.style.maxHeight = headerNav.scrollHeight + "px";
+    } else {
+        headerNav.style.maxHeight = 0;
+    }
+});
+
+
 const conceptArrows = document.querySelectorAll(".concept__chevron");
 const conceptName = document.querySelectorAll(".concept__name");
 const conceptOverlay = document.querySelector(".concept__overlay");
@@ -46,4 +58,26 @@ const adaptIndexToArray = (num, arr) => {
 
 const findElement = (classname, modifier) => {
     return document.querySelector(`.${classname}--${modifier}`);
+}
+
+
+
+const playButton = document.querySelector(".video-section__play-button");
+const videoPopup = document.querySelector(".video");
+const video = document.querySelector(".video iframe");
+const bodyOverlay = document.querySelector(".body-overlay");
+
+[bodyOverlay, playButton].forEach(element => element.addEventListener("click", () => {
+    toggleVideo();
+    setTimeout(() => {
+        if (!videoPopup.classList.contains(".video--active")) {
+            let iframeSrc = video.src;
+            video.src = iframeSrc;
+        }
+    }, 500)
+}));
+
+const toggleVideo = () => {
+    videoPopup.classList.toggle("video--active");
+    bodyOverlay.classList.toggle("body-overlay--active");
 }

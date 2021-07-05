@@ -3,8 +3,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include respond($screen-s) {
+        flex-direction: column;
+    }
     &__block {
         padding: 3rem 0;
+        @include respond($screen-s) {
+            padding: 0;
+        }
     }
     &__heading {
         margin-bottom: 0.5rem;
@@ -22,8 +28,11 @@
         display: block;
         flex: 0 0 0.25rem;
         align-self: stretch;
-        margin: 0 3rem;
-        background-image: linear-gradient(to top, $color-green, $color-gold-1);
-        transform: rotate(15deg);
+        margin: 0 4.5rem;
+        background-image: linear-gradient(to right, $color-green, $color-gold-1);
+        transform: rotate(10deg);
+        @include respond($screen-s) {
+            margin: 3rem 0;
+        }
     }
 }

@@ -9,172 +9,187 @@
     <title>Fit Project Toulouse</title>
 </head>
 
-<body class="grid grid--home">
-    <header class="header">
-        <a href="index.html" class="header__logo">
-            <img src="assets/logo.svg" alt="Fit Project Toulouse Logo">
-        </a>
-        <nav class="header__nav">
-            <a href="index.html" class="header__link nav-link">Accueil</a>
-            <a href="about.html" class="header__link nav-link">A propos</a>
-            <a href="concept.html" class="header__link nav-link">Concept</a>
-            <a href="partners.html" class="header__link nav-link">Equipe</a>
-            <a href="get_started.html" class="header__button button button--color">C'est
-                parti</a>
-        </nav>
-    </header>
-    <section class="hero-section">
-        <h1 class="heading-1 hero-section__title">Le reste de ta vie <br> commence ici!</h1>
-        <p class="hero-section__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos laborum quos repellat modi, temporibus fugit!</p>
-        <a href="get_started.html" class="hero-section__button button button--color">Qui sommes-nous?</a>
-    </section>
-    <section class="video-section">
-        <div class="video-section__overlay"></div>
-        <img src="assets/freedom-background.jpg" alt="Le reste de ta vie commence ici!" class="video-section__video">
-        <svg class="video-section__play-button">
-            <use href="assets/icons.svg#icon-play"></use>
-        </svg>
-    </section>
-    <section class="intro-section">
-        <div class="logo-mask">
-        </div>
-        <div class="intro-section__content">
-            <h2 class="heading-2 intro-section__title">Fit Project</h2>
-            <p class="intro-section__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ratione saepe qui impedit atque, esse, consequatur autem officiis nisi exercitationem laboriosam distinctio. Excepturi, officiis et?</p>
-            <p class="intro-section__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ratione saepe qui impedit atque, esse, consequatur autem officiis nisi exercitationem laboriosam distinctio. Excepturi, officiis et?</p>
-        </div>
-    </section>
-    <section class="concept-section">
-        <h2 class="heading-2 concept-section__title">Notre concept</h2>
-        <div class="concept">
-            <div class="concept__why concept__why--1 concept__content">
-                <h4 class="concept__heading concept__heading--1 heading-4">Pourquoi?</h4>
-                <p class="concept__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis corrupti fuga iste id mollitia minus facere, odit ad quaerat.</p>
+<body>
+    <main class="grid grid--home">
+        <header class="header">
+            <a href="index.html" class="header__logo">
+                <img src="assets/logo.svg" alt="Fit Project Toulouse Logo">
+            </a>
+            <input type="checkbox" id="nav-toggle__input" class="nav-toggle__input">
+            <label class="nav-toggle" for="nav-toggle__input">
+                <div class="nav-toggle__bar nav-toggle__bar--1"></div>
+                <div class="nav-toggle__bar nav-toggle__bar--2"></div>
+            </label>
+            <nav class="header__nav">
+                <a href="index.html " class="header__link nav-link ">Accueil</a>
+                <a href="about.html " class="header__link nav-link ">A propos</a>
+                <a href="concept.html " class="header__link nav-link ">Concept</a>
+                <a href="partners.html " class="header__link nav-link ">Equipe</a>
+                <a href="get_started.html " class="header__button button button--color ">C'est
+                    parti</a>
+            </nav>
+        </header>
+        <section class="hero-section ">
+            <h1 class="heading-1 hero-section__title ">Le reste de ta vie <br> commence ici!</h1>
+            <p class="hero-section__text ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos laborum quos repellat modi, temporibus fugit!</p>
+            <a href="get_started.html " class="hero-section__button button button--color ">Qui sommes-nous?</a>
+        </section>
+        <section class="video-section ">
+            <div class="video-section__overlay "></div>
+            <img src="assets/freedom-background.jpg " alt="Le reste de ta vie commence ici! " class="video-section__video ">
+            <svg class="video-section__play-button ">
+                <use href="assets/icons.svg#icon-play "></use>
+            </svg>
+        </section>
+        <section class="intro-section ">
+            <div class="logo-mask ">
             </div>
-            <div class="concept__why concept__why--2 concept__why--enter concept__content">
-                <h4 class="concept__heading concept__heading--2 heading-4">Pourquoi?</h4>
-                <p class="concept__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis corrupti fuga iste id mollitia minus facere, odit ad quaerat.</p>
+            <div class="intro-section__content ">
+                <h2 class="heading-2 intro-section__title ">Fit Project</h2>
+                <p class="intro-section__text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ratione saepe qui impedit atque, esse, consequatur autem officiis nisi exercitationem laboriosam distinctio. Excepturi, officiis et?</p>
+                <p class="intro-section__text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ratione saepe qui impedit atque, esse, consequatur autem officiis nisi exercitationem laboriosam distinctio. Excepturi, officiis et?</p>
             </div>
-            <div class="concept__why concept__why--3 concept__why--enter concept__content">
-                <h4 class="concept__heading concept__heading--3 heading-4">Pourquoi?</h4>
-                <p class="concept__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis corrupti fuga iste id mollitia minus facere, odit ad quaerat.</p>
-            </div>
-            <div class="concept__element">
-                <svg class="concept__chevron concept__chevron--left">
-                    <use href="assets/icons.svg#icon-chevron"></use>
-                </svg>
-                <h3 class="concept__name concept__name--1 concept__name--active">Nutrition</h3>
-                <h3 class="concept__name concept__name--2 ">Sport</h3>
-                <h3 class="concept__name concept__name--3 ">Loisir</h3>
-                <svg class="concept__chevron concept__chevron--right">
-                    <use href="assets/icons.svg#icon-chevron"></use>
-                </svg>
-                <img src="assets/nutrition-concept-background.jpg" alt="Nutrition" class="concept__image concept__image--1 concept__image--active">
-                <img src="assets/sport-concept-background.jpg" alt="Sport" class="concept__image concept__image--2">
-                <img src="assets/pleasure-concept-background.jpg" alt="Loisir" class="concept__image concept__image--3">
-                <div class="concept__overlay concept__overlay--1"></div>
-            </div>
-            <div class="concept__how concept__how--1 concept__content">
-                <h4 class="concept__heading concept__heading--1 heading-4">Comment?</h4>
-                <p class="concept__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis corrupti fuga iste id mollitia minus facere, odit ad quaerat.</p>
-            </div>
-            <div class="concept__how concept__how--2 concept__how--enter concept__content">
-                <h4 class="concept__heading concept__heading--2 heading-4">Comment?</h4>
-                <p class="concept__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis corrupti fuga iste id mollitia minus facere, odit ad quaerat.</p>
-            </div>
-            <div class="concept__how concept__how--3 concept__how--enter concept__content">
-                <h4 class="concept__heading concept__heading--3 heading-4">Comment?</h4>
-                <p class="concept__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis corrupti fuga iste id mollitia minus facere, odit ad quaerat.</p>
-            </div>
-        </div>
-        <a href="concept.html" class="concept-section__button button button--grey">En détail</a>
-    </section>
-    <section class="stories-section">
-        <h2 class="heading-2 stories-section__title">Nos clients</h2>
-        <div class="stories">
-            <div class="story">
-                <div class="story__image">
-                    <img src="assets/story-image-1.jpg" alt="Nom">
+        </section>
+        <section class="concept-section ">
+            <h2 class="heading-2 concept-section__title ">Notre concept</h2>
+            <div class="concept ">
+                <div class="concept__container concept__container--why ">
+                    <div class="concept__why concept__why--1 concept__content ">
+                        <h4 class="concept__heading concept__heading--1 heading-4 ">Pourquoi?</h4>
+                        <p class="concept__text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis corrupti fuga iste id mollitia minus facere, odit ad quaerat.</p>
+                    </div>
+                    <div class="concept__why concept__why--2 concept__why--enter concept__content ">
+                        <h4 class="concept__heading concept__heading--2 heading-4 ">Pourquoi?</h4>
+                        <p class="concept__text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis corrupti fuga iste id mollitia minus facere, odit ad quaerat.</p>
+                    </div>
+                    <div class="concept__why concept__why--3 concept__why--enter concept__content ">
+                        <h4 class="concept__heading concept__heading--3 heading-4 ">Pourquoi?</h4>
+                        <p class="concept__text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis corrupti fuga iste id mollitia minus facere, odit ad quaerat.</p>
+                    </div>
                 </div>
-                <div class="story__line">
-                    Nom
+                <div class="concept__element ">
+                    <svg class="concept__chevron concept__chevron--left ">
+                        <use href="assets/icons.svg#icon-chevron "></use>
+                    </svg>
+                    <h3 class="concept__name concept__name--1 concept__name--active ">Nutrition</h3>
+                    <h3 class="concept__name concept__name--2 ">Sport</h3>
+                    <h3 class="concept__name concept__name--3 ">Loisir</h3>
+                    <svg class="concept__chevron concept__chevron--right ">
+                        <use href="assets/icons.svg#icon-chevron "></use>
+                    </svg>
+                    <img src="assets/nutrition-concept-background.jpg " alt="Nutrition " class="concept__image concept__image--1 concept__image--active ">
+                    <img src="assets/sport-concept-background.jpg " alt="Sport " class="concept__image concept__image--2 ">
+                    <img src="assets/pleasure-concept-background.jpg " alt="Loisir " class="concept__image concept__image--3 ">
+                    <div class="concept__overlay concept__overlay--1 "></div>
                 </div>
-                <div class="story__line">
-                    Age
-                </div>
-                <div class="story__line">
-                    Métier
-                </div>
-                <div class="story__line">
-                    Résultat
+                <div class="concept__container concept__container--how ">
+                    <div class="concept__how concept__how--1 concept__content ">
+                        <h4 class="concept__heading concept__heading--1 heading-4 ">Comment?</h4>
+                        <p class="concept__text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis corrupti fuga iste id mollitia minus facere, odit ad quaerat.</p>
+                    </div>
+                    <div class="concept__how concept__how--2 concept__how--enter concept__content ">
+                        <h4 class="concept__heading concept__heading--2 heading-4 ">Comment?</h4>
+                        <p class="concept__text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis corrupti fuga iste id mollitia minus facere, odit ad quaerat.</p>
+                    </div>
+                    <div class="concept__how concept__how--3 concept__how--enter concept__content ">
+                        <h4 class="concept__heading concept__heading--3 heading-4 ">Comment?</h4>
+                        <p class="concept__text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis corrupti fuga iste id mollitia minus facere, odit ad quaerat.</p>
+                    </div>
                 </div>
             </div>
-            <div class="story">
-                <div class="story__image">
-                    <img src="assets/story-image-1.jpg" alt="Nom">
+            <a href="concept.html " class="concept-section__button button button--grey ">En détail</a>
+        </section>
+        <section class="stories-section ">
+            <h2 class="heading-2 stories-section__title ">Nos clients</h2>
+            <div class="stories ">
+                <div class="story ">
+                    <div class="story__image ">
+                        <img src="assets/story-image-1.jpg " alt="Nom ">
+                    </div>
+                    <div class="story__line ">
+                        Nom
+                    </div>
+                    <div class="story__line ">
+                        Age
+                    </div>
+                    <div class="story__line ">
+                        Métier
+                    </div>
+                    <div class="story__line ">
+                        Résultat
+                    </div>
                 </div>
-                <div class="story__line">
-                    Nom
+                <div class="story ">
+                    <div class="story__image ">
+                        <img src="assets/story-image-1.jpg " alt="Nom ">
+                    </div>
+                    <div class="story__line ">
+                        Nom
+                    </div>
+                    <div class="story__line ">
+                        Age
+                    </div>
+                    <div class="story__line ">
+                        Métier
+                    </div>
+                    <div class="story__line ">
+                        Résultat
+                    </div>
                 </div>
-                <div class="story__line">
-                    Age
-                </div>
-                <div class="story__line">
-                    Métier
-                </div>
-                <div class="story__line">
-                    Résultat
+                <div class="story ">
+                    <div class="story__image ">
+                        <img src="assets/story-image-1.jpg " alt="Nom ">
+                    </div>
+                    <div class="story__line ">
+                        Nom
+                    </div>
+                    <div class="story__line ">
+                        Age
+                    </div>
+                    <div class="story__line ">
+                        Métier
+                    </div>
+                    <div class="story__line ">
+                        Résultat
+                    </div>
                 </div>
             </div>
-            <div class="story">
-                <div class="story__image">
-                    <img src="assets/story-image-1.jpg" alt="Nom">
+            <a href="concept.html " class="concept-section__button button button--white ">Voir plus</a>
+        </section>
+        <section class="contact-section ">
+            <h2 class="heading-2 contact-section__title ">Démarre avec nous!</h2>
+            <div class="get-started ">
+                <div class="get-started__block get-started__block ">
+                    <h4 class="get-started__heading get-started__heading--1 heading-4 ">Je veux me mettre en forme!</h4>
+                    <p class="get-started__text ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In dicta placeat ullam, deserunt quod qui.</p>
+                    <a href="get_started.html " class="header__button button button--color ">Commencer</a>
                 </div>
-                <div class="story__line">
-                    Nom
-                </div>
-                <div class="story__line">
-                    Age
-                </div>
-                <div class="story__line">
-                    Métier
-                </div>
-                <div class="story__line">
-                    Résultat
+                <div class="get-started__separator "></div>
+                <div class="get-started__block get-started__block ">
+                    <h4 class="get-started__heading get-started__heading--2 heading-4 ">Je veux rejoindre l'équipe</h4>
+                    <p class="get-started__text ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In dicta placeat ullam, deserunt quod qui.</p>
+                    <a href="get_started.html " class="header__button button button--color ">Commencer</a>
                 </div>
             </div>
-        </div>
-        <a href="concept.html" class="concept-section__button button button--white">Voir plus</a>
-    </section>
-    <section class="contact-section">
-        <h2 class="heading-2 contact-section__title">Démarre avec nous!</h2>
-        <div class="get-started">
-            <div class="get-started__block get-started__block">
-                <h4 class="get-started__heading get-started__heading--1 heading-4">Je veux me mettre en forme!</h4>
-                <p class="get-started__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In dicta placeat ullam, deserunt quod qui.</p>
-                <a href="get_started.html" class="header__button button button--color">Commencer</a>
-            </div>
-            <div class="get-started__separator"></div>
-            <div class="get-started__block get-started__block">
-                <h4 class="get-started__heading get-started__heading--2 heading-4">Je veux rejoindre l'équipe</h4>
-                <p class="get-started__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In dicta placeat ullam, deserunt quod qui.</p>
-                <a href="get_started.html" class="header__button button button--color">Commencer</a>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <nav class="footer__nav">
-            <a href="index.html" class="footer__link nav-link">Acceuil</a>
-            <a href="get_started.html" class="footer__link nav-link">Contact</a>
-            <a href="terms_of_use.html" class="footer__link nav-link">Termes d'utilisation</a>
-            <a href="privacy_policy.html" class="footer__link nav-link">Politique de confidentialité</a>
-        </nav>
-        <p class="footer__disclaimer">&copy; Fit Project Toulouse 2021. Tous droits réservés.</p>
-        <a href="index.html" class="footer__logo">
-            <img src="assets/logo-inverted.svg" alt="Fit Project Toulouse Logo">
-        </a>
-    </footer>
-    <script src="scripts/main.js"></script>
+        </section>
+        <footer class="footer ">
+            <nav class="footer__nav ">
+                <a href="index.html " class="footer__link nav-link ">Acceuil</a>
+                <a href="get_started.html " class="footer__link nav-link ">Contact</a>
+                <a href="terms_of_use.html " class="footer__link nav-link ">Termes d'utilisation</a>
+                <a href="privacy_policy.html " class="footer__link nav-link ">Politique de confidentialité</a>
+            </nav>
+            <p class="footer__disclaimer ">&copy; Fit Project Toulouse 2021. Tous droits réservés.</p>
+            <a href="index.html " class="footer__logo ">
+                <img src="assets/logo-inverted.svg " alt="Fit Project Toulouse Logo ">
+            </a>
+        </footer>
+    </main>
+    <aside class="video ">
+        <iframe src="https://www.youtube.com/embed/WmFwB4VPOII " allowfullscreen></iframe>
+    </aside>
+    <div class="body-overlay "></div>
+    <script src="scripts/main.js "></script>
 </body>
 
 </html>

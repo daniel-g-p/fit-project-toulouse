@@ -4,22 +4,41 @@ $color-2: $color-blue;
 $color-3: $color-gold-1;
 .concept {
     position: relative;
-    display: block;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     margin: 2rem auto 3rem;
+    @include respond($screen-m) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        gap: 3rem 2rem;
+    }
+    &__container {
+        flex: 0 0 30%;
+        position: relative;
+        align-self: stretch;
+    }
     &__content {
         text-align: left;
         position: absolute;
         top: 50%;
+        left: 0;
+        width: 100%;
         transform: translateY(-50%);
-        width: 22.5vw;
         transition: all 0.25s ease;
+        @include respond($screen-m) {
+            position: relative;
+        }
     }
     &__why {
-        left: 0;
+        grid-column: 2 / -1;
+        grid-row: 2 / -1;
         &--enter {
+            position: absolute;
+            top: 50%;
+            left: 0;
             opacity: 0;
             transform: translateY(calc(-50% + 1rem));
         }
@@ -29,8 +48,12 @@ $color-3: $color-gold-1;
         }
     }
     &__how {
-        right: 0;
+        grid-column: 1 / 2;
+        grid-row: 2 / -1;
         &--enter {
+            position: absolute;
+            top: 50%;
+            left: 0;
             opacity: 0;
             transform: translateY(calc(-50% - 1rem));
         }
@@ -53,10 +76,8 @@ $color-3: $color-gold-1;
     }
     &__element {
         position: relative;
-        width: 25vw;
+        flex: 0 0 25vw;
         height: 25vw;
-        min-width: 25vw;
-        min-height: 25vw;
         border-radius: 50%;
         margin: 0 auto;
         padding: 1rem;
@@ -65,6 +86,14 @@ $color-3: $color-gold-1;
         align-items: center;
         box-shadow: 0 0 2rem $color-shadow;
         overflow: hidden;
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        @include respond($screen-m) {
+            width: 60vw;
+            height: 60vw;
+            max-width: 20rem;
+            max-height: 20rem;
+        }
     }
     &__name {
         position: absolute;
