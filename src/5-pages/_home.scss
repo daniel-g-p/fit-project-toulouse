@@ -37,8 +37,8 @@
     grid-row: hero-start / hero-end;
     clip-path: polygon(10vw 0, 50vw 0, 100% 100%, 0 100%);
     overflow: hidden;
-    height: 33vh;
     @include respond($screen-s) {
+        height: 33vh;
         clip-path: none;
         grid-column: page-start / page-end;
         grid-row: video-start / video-end;
